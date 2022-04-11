@@ -1,0 +1,23 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+/*display background image*/
+body
+{
+	background-image: url(../img/lottery-balls.jpg);
+}
+/*style the form*/
+div.form
+{
+	font-size: 50px;
+	font-family: 'Garamond', serif;
+	text-align: center;
+	background-color: black;
+	color: white;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px 0 20px 0;
+}
+
+.hidden {
+	display:none; 
+}

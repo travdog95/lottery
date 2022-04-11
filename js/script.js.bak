@@ -1,0 +1,48 @@
+//initialize variables
+var i, lotString, lotSegment;
+var form = document.getElementById("lotteryForm");
+var userInput;
+
+form.addEventListener("submit", (e) => {
+	e.preventDefault();
+	userInput = document.getElementById("lotAmt").value;
+	
+	//don't let the user "get lottery numbers" if there is no input
+	if (userInput === "") return;
+
+	generateLotteryNumber(userInput);
+
+});
+
+//ask user how many numbers they want to input
+function generateLotteryNumber(userInput, runAgain){
+	
+	
+	//insert dashes between each lottery number
+	lotString = "";
+	
+	for (i = 0; i < userInput; i++){
+		lotSegment = Math.ceil(Math.random()*99);
+		if (i == 0){
+			lotString += lotSegment;
+		}else{
+			lotString += "-" + lotSegment;
+		}	
+	}
+	
+	document.getElementById("lotteryNumber").innerHTML = lotString;
+
+	if (runAgain === undefined) {
+		//display the lottery numbers in the HTML text box
+		document.getElementById("lotteryNumberContainer").classList.toggle("hidden");
+		document.getElementById("runAgain").classList.toggle("hidden");
+		document.getElementById("runAgainButton").classList.toggle("hidden");
+	}
+}
+//run file again if "Run Again" button gets pushed
+function runAgain(){
+
+	generateLotteryNumber(userInput, true);
+}
+	
+

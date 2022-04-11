@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang ="en">
+	
+	<head>
+		<title>Lottery</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src = "js/script.js" defer></script>
+	</head>
+	
+	<body>
+		<div class="form">
+			<form method="get" id="lotteryForm">
+				<div id="runAgain">
+					<label for="lotAmt">How many numbers do you want on your lottery ticket?</label>
+					<input type="text" id="lotAmt" name="lotAmt"><br>
+					<button class="runLotto">Click here to get your ticket numbers!</button>
+				</div>
+				<div id="lotteryNumberContainer" class="hidden">
+					<p>Your lottery number is:</p>
+					<p id="lotteryNumber"></p>
+				</div>
+			</form>
+			<button id="runAgainButton" class="hidden" onclick="runAgain()">Run Again</button>
+
+		</div>
+	</body>
+	
+</html>
